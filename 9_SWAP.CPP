@@ -16,8 +16,6 @@ cout <<x <<"  "<<y<<endl;
 // x = x - y;
 
 // METHOD 3
-
-
 cout <<x <<"  "<<y<<endl;
 
 return 0;
