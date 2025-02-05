@@ -1,17 +1,12 @@
-#include<iostream>
+#include <iostream>
+#include <string>
 using namespace std;
 int main(){
-    int a;
-    int  discount=1;
-    cout << ("Enter the value of your bill\n");
-    cin >> a;
-
-    if(a<=500)
-     cout << "No discout is available for you";
-
-    else if (a>500)
-    cout << "The discout will be of 5%";
-    discount = a * 0.05;
-    cout << "The discount is "<< discount <<endl;
-
+    string palindrome;
+    cout << "Enter a number or string: " << endl;
+    cin >> palindrome;
+    for (int i=palindrome.length()-1; i>=0; i--){
+        cout << palindrome[i];
+    }
+    return 0;
 }
