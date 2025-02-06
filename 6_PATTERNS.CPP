@@ -16,7 +16,7 @@
 // }
 
 
-// To print a triangle with continuos integers 
+// TO PRINT A TRIANGLE WITH CONTINUOUS INTEGERS
 // #include<iostream>
 // using namespace std;
 // int main()
