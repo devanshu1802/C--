@@ -1,32 +1,42 @@
 #include<iostream>
 using namespace std;
-class student{
-        int rollno;
-        string name;
-        int marks1, marks2, marks3;
+class Employee{
     public:
-        void get_data(){
-            cout << "Enter the name:";
-            cin >> name;
-            cout << "Enter the roll number: ";
-            cin >> rollno;
-            cout << "Enter the marks in order :";
-            cin >> marks1 >> marks2 >> marks3;
+    string name;
+    int salary;
+    int employee_id;
 
-        }
-        int total(int a,int b,int c){
-            return a+b+c;
-        }
-        void show_data(){
-            cout << "Name of the student is :" << name << endl;
-            cout << "Roll number of the student is " << rollno << endl;
-            cout << "Total marks of the 3 subjects :" << total(marks1,marks2,marks3) << endl;
-        }
+    void get_info(){
+        cout<<"Enter Name of the Employee : "<<endl;
+        cin>>name;
+        cout<<"Enter salary : "<<endl;
+        cin>>salary;
+        cout<<"Enter the Employee ID: "<<endl;
+        cin>>employee_id;
+
+    }
+    void display_info();
 
 };
+void Employee::display_info(){
+    cout<<"The name of Employee is: "<<name<<endl;
+    cout<<"The salary of Employee is: "<<salary<<endl;
+    cout<<"The employee_id of Employee is: "<<employee_id<<endl;
+
+}
 int main(){
-    student s1;
-    s1.get_data();
-    s1.show_data();
-return 0;
+    cout<<"===================================="<<endl;
+    cout<<"      WELCOME TO LPU.FACULTY.       "<<endl;
+    cout<<"===================================="<<endl;
+
+
+    Employee emp[3];
+    for(int i=0; i<3; i++){
+        emp[i].get_info();
+    }
+    for(int i=0; i<5; i++){
+        emp[i].display_info();
+    }
+    return 0;
+
 }
