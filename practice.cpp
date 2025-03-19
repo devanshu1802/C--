@@ -1,42 +1,47 @@
 #include<iostream>
 using namespace std;
-class Employee{
+class student{
     public:
     string name;
-    int salary;
-    int employee_id;
-
-    void get_info(){
-        cout<<"Enter Name of the Employee : "<<endl;
-        cin>>name;
-        cout<<"Enter salary : "<<endl;
-        cin>>salary;
-        cout<<"Enter the Employee ID: "<<endl;
-        cin>>employee_id;
-
+    int roll_no;
+    int marks;
+    
+    void set_details(string s, int f, int m){
+        name= s;
+        roll_no = f;
+        marks = m;
     }
-    void display_info();
 
+    void display_info(){
+        cout << "The name of the Student : " << name << endl;
+        cout << "The Roll Number is :" << roll_no << endl;
+        cout << "The Marks of the student is :" << marks << endl;
+    }
+    string cal_Grade();
+    void display_Result();
 };
-void Employee::display_info(){
-    cout<<"The name of Employee is: "<<name<<endl;
-    cout<<"The salary of Employee is: "<<salary<<endl;
-    cout<<"The employee_id of Employee is: "<<employee_id<<endl;
 
+string student :: cal_Grade(){
+    if(marks>90)
+        return "Grade A";
+    else if(marks>75)
+        return "Grade B";
+    else if(marks>60)
+        return "Grade C";
+    else
+        return "Grade D";
+    }
+
+
+void student :: display_Result(){
+    cout << "The Grade of the student is :" << cal_Grade() << endl;
 }
+
+
 int main(){
-    cout<<"===================================="<<endl;
-    cout<<"      WELCOME TO LPU.FACULTY.       "<<endl;
-    cout<<"===================================="<<endl;
-
-
-    Employee emp[3];
-    for(int i=0; i<3; i++){
-        emp[i].get_info();
-    }
-    for(int i=0; i<5; i++){
-        emp[i].display_info();
-    }
+    student s1;
+    s1.set_details("Devanshu", 56, 99);
+    s1.display_info();
+    s1.display_Result();
     return 0;
-
 }
