@@ -7,21 +7,23 @@ class Food{
     string food;
 
     public:
-        Food(){
+        Food(){                                         // Default Constructor
             name = "Unknown";
             id = 1;
             food = "Milk Cake";
         }
-        Food(string n, int i, string f){
+        Food(string n, int i, string f){                // Parameterized Constructor
             name = n;
             id = i;
             food = f;
-
         }
         void display(){
             cout << "The Customer Name is : "<< name << endl;
             cout << "The Customer Id is : "<< id << endl;
             cout << "The Customer has ordered : "<< food << endl << endl;
+        }
+        ~Food(){
+            cout << "You order has been Delivered "<< name << endl;             // Destructor 
         }
 };
 int main(){
