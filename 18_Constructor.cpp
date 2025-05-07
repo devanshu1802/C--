@@ -47,7 +47,7 @@ class Cart {
 public:
     Cart() {
         cout << "Enter the Product name: ";
-        cin >> product ;
+        getline(cin, product);
     }
     ~Cart(){
         cout << "Deleted product name is :"<< product << endl;
