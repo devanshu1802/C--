@@ -154,7 +154,7 @@
 // }
 
 
-// TO PRINT THE STAR PATTERN VERTICALLY FLIPPED
+// TO PRINT THE RIGHT TRIANGLE PATTERN VERTICALLY FLIPPED
 // #include<iostream>
 // using namespace std;
 // int main()
