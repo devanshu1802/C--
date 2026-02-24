@@ -1,6 +1,9 @@
 #include<iostream>
 using namespace std;
 // Question - Search in Rotated Sorted Array
+// Normal Sorted Array = {2,3,4,5,6,7,8};
+// Rotated Sorted Array = {6,7,8,2,3,4,5};
+
 int rotatedArray(vector<int> nums, int tar){
     int st = 0, end= nums.size()-1;
 
