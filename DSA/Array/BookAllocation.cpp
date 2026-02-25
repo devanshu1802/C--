@@ -25,7 +25,6 @@ int allocateBooks(vector<int> &arr, int n, int m){
     if(m>n){
         return -1;
     }
-
     int sum = 0;
     for(int i=0; i<n; i++){
         sum += arr[i];
@@ -48,8 +47,8 @@ int allocateBooks(vector<int> &arr, int n, int m){
 
 }
 int main(){
-    vector<int> vec = {2,1,3,4};
-    int n =4, m=2;
+    vector<int> vec = {15,17,20};
+    int n =3, m=2;
 
     cout<< allocateBooks(vec,n,m) << endl;
 
